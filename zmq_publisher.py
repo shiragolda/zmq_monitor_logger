@@ -31,22 +31,23 @@ class zmqPublisher:
 
 
 ## test code
-import numpy as np
-import random
-import string
+if __name__ == '__main__':
+    import numpy as np
+    import random
+    import string
 
-publisher = zmqPublisher()
+    publisher = zmqPublisher()
 
-def test_stream():
-    while(True):
-        try:
-            newval1 = np.random.rand()
-            newval2 = int(10*np.random.rand())
-            strval = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(10)])
-            data = (newval1,newval2,strval)
-            publisher.publish_data(data,prnt=True)
-        except KeyboardInterrupt:
-            break
-        time.sleep(1)
-        
-test_stream()
+    def test_stream():
+        while(True):
+            try:
+                newval1 = np.random.rand()
+                newval2 = int(10*np.random.rand())
+                strval = ''.join([random.choice(string.ascii_letters + string.digits) for n in range(10)])
+                data = (newval1,newval2,strval)
+                publisher.publish_data(data,prnt=True)
+            except KeyboardInterrupt:
+                break
+            time.sleep(1)
+
+    test_stream()
