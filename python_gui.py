@@ -36,13 +36,21 @@ window.pack(in_=root)
 
 
 # --------------- add widgets here -------------------------#
-#DataWidget(window,PORT,topic,[label1,label2,...,labeln],save_folder = '/path/to/save_folder')
+#DataWidget(window,PORT,topic,[label1,label2,...,labeln],save_folder = '/path/to/non-default/save_folder')
 
-DataWidget(window,5551,'temp_control',["Cavity Err (C)","Cavity Corr (V)","Err 2 (C)","Corr 2 (V)","423 Baseplate Err (C)","423 Baseplate Corr (V)","TI Err (C)","TI Corr (V)"],save_folder = "/home/labuser/googledrive/Calcium/data/labjack_temperature")
+DataWidget(window,5550,'test',["some float (V)","some integer (s)","some string"])
 
-DataWidget(window,5556,'power_meter',["Power (mW)"],save_folder = "/home/labuser/googledrive/Calcium/data/power_meter")
+DataWidget(window,5556,'second widget',["Val1","Val2"])
 
-DataWidget(window,5560,'synthusb',["Frequency (MHz)","Amplitude (0,1,2, or 3)"],save_folder = "/home/labuser/googledrive/Calcium/data/synthusb")
+DataWidget(window,5556,'third widget',["Val1","Val2"])
+
+DataWidget(window,5556,'fourth widget',["Val1","Val2",'val3','val4','val5','the sixth value','val7','val8'])
+
+DataWidget(window,5556,'fifth widget',["some crazy long label","Val2"])
+
+DataWidget(window,5556,'sixth widget',["Val1","Val2",'val3','val4','val5','the sixth value','val7'])
+
+DataWidget(window,5556,'seventh widget',["Val1","another long one"])
 # -------------------------------------------------------#
 
 root.mainloop()
